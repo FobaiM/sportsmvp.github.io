@@ -1,0 +1,267 @@
+<!--Author: Fobai Mbamuku-->
+<!-- Date: 12.20.23-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Registration Form | CodingLab</title>
+  <link rel="stylesheet" href="style1.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(245.59deg, #4d9559 0%, #38703d 28.53%, #133917 75.52%);
+      color: white;
+    }
+
+    header {
+      position: fixed;
+      right: 0;
+      z-index: 1000;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 9%;
+      background: transparent;
+    }
+
+    .logo {
+      font-size: 30px;
+      font-weight: 700;
+      margin-left: 250px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .navlist {
+      display: flex;
+      align-items: center;
+    }
+
+    .navlist ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .navlist a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 15px;
+      font-weight: 600;
+      border-bottom: 2px solid transparent;
+      transition: all 0.55s ease;
+    }
+
+    .navlist a:hover {
+      border-bottom: 2px solid white;
+    }
+
+    section.content {
+      padding: 100px 9%;
+    }
+
+    footer {
+      padding: 20px 9%;
+      background: #4d9559;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .content {
+      width: 50%;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .user-details,
+    .gender-details,
+    .button {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .input-box {
+      margin-bottom: 15px;
+      width: 48%;
+    }
+
+    .input-box input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 8px;
+      border: none;
+      border-bottom: 1px solid #333;
+      outline: none;
+      background: transparent;
+      color: white;
+    }
+
+    .gender-details {
+      margin-top: 20px;
+    }
+
+    .gender-title {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .category label {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .dot {
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      margin-right: 10px;
+      background: #333;
+    }
+
+    .one {
+      background: #4d9559;
+    }
+
+    .two {
+      background: #4d9559;
+    }
+
+    .three {
+      background: #4d9559;
+    }
+
+    .button input {
+      width: auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      background: #4d9559;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href='index.html' class="logo">SPORTSMVP</a>
+    <div class="menu-icon" id="menu-icon"></div>
+    <nav class="navlist">
+      <ul>
+        <li><a href="teams.html">Teams</a></li>
+        <li><a href="players.html">Players</a></li>
+        <li><a href="standings.html">Standings</a></li>
+        <li><a href="stats.html">Statistics</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="registration.html">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <!-- Hero Image Placeholder - You can replace the 'hero_placeholder.jpg' with your actual hero image -->
+    <img src="hero3.png" alt="Hero Image" style="width: 30%;">
+    <div class="content">
+      <div class="title">Registration</div>
+      <div class="user-details">
+        <div class="input-box">
+          <span class="details">Full Name</span>
+          <input type="text" placeholder="Enter your name" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Username</span>
+          <input type="text" placeholder="Enter your username" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Email</span>
+          <input type="text" placeholder="Enter your email" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Phone Number</span>
+          <input type="text" placeholder="Enter your number" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Password</span>
+          <input type="text" placeholder="Enter your password" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Confirm Password</span>
+          <input type="text" placeholder="Confirm your password" required>
+        </div>
+        <div class="gender-details">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label for="male">
+              <input id="male" type="radio" name="gender" value="Male">
+              <span class="dot one"></span>
+              <span class="gender">Male</span>
+            </label>
+            <label for="female">
+              <input id="female" type="radio" name="gender" value="Female">
+              <span class="dot two"></span>
+              <span class="gender">Female</span>
+            </label>
+            <label for="preferNotToSay">
+              <input id="preferNotToSay" type="radio" name="gender" value="Prefer not to say">
+              <span class="dot three"></span>
+              <span class="gender">Prefer not to say</span>
+            </label>
+          </div>
+        </div>
+        <div class="submitbutton">
+          <button onclick="submitForm()">Register</button>
+        </div>
+      </div>
+    </div>
+  
+    <script>
+      function submitForm() {
+        var fullName = document.getElementById('fullName').value;
+        var username = document.getElementById('username').value;
+        var email = document.getElementById('email').value;
+        var phoneNumber = document.getElementById('phoneNumber').value;
+        var password = document.getElementById('password').value;
+        var confirmPassword = document.getElementById('confirmPassword').value;
+        var gender = document.querySelector('input[name="gender"]:checked') ? document.querySelector('input[name="gender"]:checked').value : '';
+  
+        var message = `Registration Details:\n\nFull Name: ${fullName}\nUsername: ${username}\nEmail: ${email}\nPhone Number: ${phoneNumber}\nPassword: ${password}\nConfirm Password: ${confirmPassword}\nGender: ${gender}`;
+        alert(message);
+      }
+    </script>
+  </body>
+     
+</html>

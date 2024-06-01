@@ -1,0 +1,470 @@
+<!--Author: Fobai Mbamuku-->
+<!-- Date: 12.20.23-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>SportsMVP</title>
+
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(245.59deg, #29572e 0%, #1f4726 28.53%, #0f2712 75.52%);
+      color: white;
+    }
+
+    header {
+      position: fixed;
+      right: 0;
+      z-index: 1000;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 9%;
+      background: transparent;
+    }
+
+    .logo {
+      font-size: 30px;
+      font-weight: 700;
+      color: white;
+      text-decoration: none;
+    }
+
+    .menu-icon {
+      display: none;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .navlist {
+      display: flex;
+      align-items: center;
+    }
+
+    .navlist ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .navlist a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 15px;
+      font-weight: 600;
+      border-bottom: 2px solid transparent;
+      transition: all 0.55s ease;
+    }
+
+    .navlist a:hover {
+      border-bottom: 2px solid white;
+    }
+
+    #menu-icon {
+      color: white;
+      font-size: 40px;
+      z-index: 10001;
+      cursor: pointer;
+    }
+
+    .teams-page {
+      padding-top: 80px;
+    }
+
+    .hero-images{
+      height: 100%;
+      width: 100%;
+      min-height: 100vh;
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .hero-images {
+      width: 100%;
+      height: auto;
+    }
+
+    .division {
+      margin-bottom: 40px;
+    }
+
+    .division h3 {
+      font-size: 24px;
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .team-card {
+      margin-bottom: 20px;
+    }
+
+    .team-card a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .team-card img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .hero-images {
+      position: absolute;
+      top: 20px;
+      right: 0;
+      bottom: 0;
+      width: 70%; /* Adjust as needed */
+      overflow: hidden;
+    }
+
+    .hero-images img {
+      max-width: 100%;
+      height: 800px;
+      object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+      .navlist {
+        display: none;
+        flex-direction: column;
+        background: #4d9559;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+      }
+
+      .navlist.open {
+        display: flex;
+      }
+
+      .navlist a {
+        margin-left: 0;
+        display: block;
+        margin: 7px 0;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+
+      .hero-images {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href='index.html' class="logo">SPORTSMVP</a>
+    <div class="menu-icon" id="menu-icon"></div>
+    <nav class="navlist">
+      <ul>
+        <li><a href="teams.html">Teams</a></li>
+        <li><a href="players.html">Players</a></li>
+        <li><a href="standings.html">Standings</a></li>
+        <li><a href="stats.html">Statistics</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="registration.html">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Your content goes here -->
+
+  <section id="teams" class="teams-page">
+    <h1>NBA Teams</h1>
+
+
+    <!-- Atlantic Division -->
+    <div class="division">
+      <h3>Atlantic Division</h3>
+
+    <!-- Boston Celtics -->
+<div class="team-card">
+  <a href="https://www.nba.com/celtics/" target="_blank">
+    <img src="boston_celtics.png" alt="Boston Celtics Logo">
+    <h3>Boston Celtics</h3>
+  </a>
+</div>
+
+<!-- Brooklyn Nets -->
+<div class="team-card">
+  <a href="https://www.nba.com/nets/" target="_blank">
+    <img src="brooklyn_nets.png" alt="Brooklyn Nets Logo">
+    <h3>Brooklyn Nets</h3>
+  </a>
+</div>
+
+<!-- New York Knicks -->
+<div class="team-card">
+  <a href="https://www.nba.com/knicks/" target="_blank">
+    <img src="ny_knicks.png" alt="New York Knicks Logo">
+    <h3>New York Knicks</h3>
+  </a>
+</div>
+
+<!-- Philadelphia 76ers -->
+<div class="team-card">
+  <a href="https://www.nba.com/sixers/" target="_blank">
+    <img src="phila_76ers.png" alt="Philadelphia 76ers Logo">
+    <h3>Philadelphia 76ers</h3>
+  </a>
+</div>
+
+<!-- Toronto Raptors -->
+<div class="team-card">
+  <a href="https://www.nba.com/raptors/" target="_blank">
+    <img src="toronto_raptors.png" alt="Toronto Raptors Logo">
+    <h3>Toronto Raptors</h3>
+  </a>
+</div>
+
+<!-- Central Division -->
+<div class="division">
+  <h3>Central Division</h3>
+
+  <!-- Chicago Bulls -->
+  <div class="team-card">
+    <a href="https://www.nba.com/bulls/" target="_blank">
+      <img src="chicago_bulls.png" alt="Chicago Bulls Logo">
+      <h3>Chicago Bulls</h3>
+    </a>
+  </div>
+
+  <!-- Cleveland Cavaliers -->
+  <div class="team-card">
+    <a href="https://www.nba.com/cavaliers/" target="_blank">
+      <img src="cleveland_cavaliers.png" alt="Cleveland Cavaliers Logo">
+      <h3>Cleveland Cavaliers</h3>
+    </a>
+  </div>
+
+  <!-- Detroit Pistons -->
+  <div class="team-card">
+    <a href="https://www.nba.com/pistons/" target="_blank">
+      <img src="detroit_pistons.png" alt="Detroit Pistons Logo">
+      <h3>Detroit Pistons</h3>
+    </a>
+  </div>
+
+  <!-- Indiana Pacers -->
+  <div class="team-card">
+    <a href="https://www.nba.com/pacers/" target="_blank">
+      <img src="indiana_pacers.png" alt="Indiana Pacers Logo">
+      <h3>Indiana Pacers</h3>
+    </a>
+  </div>
+
+  <!-- Milwaukee Bucks -->
+  <div class="team-card">
+    <a href="https://www.nba.com/bucks/" target="_blank">
+      <img src="milwaukee_bucks.png" alt="Milwaukee Bucks Logo">
+      <h3>Milwaukee Bucks</h3>
+    </a>
+  </div>
+</div>
+
+<!-- Northwest Division -->
+<div class="division">
+  <h3>Northwest Division</h3>
+
+  <!-- Denver Nuggets -->
+  <div class="team-card">
+    <a href="https://www.nba.com/nuggets/" target="_blank">
+      <img src="denver_nuggets.png" alt="Denver Nuggets Logo">
+      <h3>Denver Nuggets</h3>
+    </a>
+  </div>
+
+  <!-- Minnesota Timberwolves -->
+  <div class="team-card">
+    <a href="https://www.nba.com/timberwolves/" target="_blank">
+      <img src="minnesota_timberwolves.png" alt="Minnesota Timberwolves Logo">
+      <h3>Minnesota Timberwolves</h3>
+    </a>
+  </div>
+
+  <!-- Oklahoma City Thunder -->
+  <div class="team-card">
+    <a href="https://www.nba.com/thunder/" target="_blank">
+      <img src="okc_thunder.png" alt="Oklahoma City Thunder Logo">
+      <h3>Oklahoma City Thunder</h3>
+    </a>
+  </div>
+
+  <!-- Portland Trail Blazers -->
+  <div class="team-card">
+    <a href="https://www.nba.com/blazers/" target="_blank">
+      <img src="portland_trail_blazers.png" alt="Portland Trail Blazers Logo">
+      <h3>Portland Trail Blazers</h3>
+    </a>
+  </div>
+
+  <!-- Utah Jazz -->
+  <div class="team-card">
+    <a href="https://www.nba.com/jazz/" target="_blank">
+      <img src="utah_jazz.png" alt="Utah Jazz Logo">
+      <h3>Utah Jazz</h3>
+    </a>
+  </div>
+</div>
+
+<!-- Pacific Division -->
+<div class="division">
+  <h3>Pacific Division</h3>
+
+  <!-- Golden State Warriors -->
+  <div class="team-card">
+    <a href="https://www.nba.com/warriors/" target="_blank">
+      <img src="golden_state_warriors.png" alt="Golden State Warriors Logo">
+      <h3>Golden State Warriors</h3>
+    </a>
+  </div>
+
+  <!-- LA Clippers -->
+  <div class="team-card">
+    <a href="https://www.nba.com/clippers/" target="_blank">
+      <img src="la_clippers.png" alt="LA Clippers Logo">
+      <h3>LA Clippers</h3>
+    </a>
+  </div>
+
+  <!-- Los Angeles Lakers -->
+  <div class="team-card">
+    <a href="https://www.nba.com/lakers/" target="_blank">
+      <img src="la_lakers.png" alt="Los Angeles Lakers Logo">
+      <h3>Los Angeles Lakers</h3>
+    </a>
+  </div>
+
+  <!-- Phoenix Suns -->
+  <div class="team-card">
+    <a href="https://www.nba.com/suns/" target="_blank">
+      <img src="phoenix_suns.png" alt="Phoenix Suns Logo">
+      <h3>Phoenix Suns</h3>
+    </a>
+  </div>
+
+  <!-- Sacramento Kings -->
+  <div class="team-card">
+    <a href="https://www.nba.com/kings/" target="_blank">
+      <img src="sacramento_kings.png" alt="Sacramento Kings Logo">
+      <h3>Sacramento Kings</h3>
+    </a>
+  </div>
+</div>
+
+<!-- Southeast Division -->
+<div class="division">
+  <h3>Southeast Division</h3>
+
+  <!-- Atlanta Hawks -->
+  <div class="team-card">
+    <a href="https://www.nba.com/hawks/" target="_blank">
+      <img src="atlanta_hawks.png" alt="Atlanta Hawks Logo">
+      <h3>Atlanta Hawks</h3>
+    </a>
+  </div>
+
+  <!-- Charlotte Hornets -->
+  <div class="team-card">
+    <a href="https://www.nba.com/hornets/" target="_blank">
+      <img src="charlotte_hornets.png" alt="Charlotte Hornets Logo">
+      <h3>Charlotte Hornets</h3>
+    </a>
+  </div>
+
+  <!-- Miami Heat -->
+  <div class="team-card">
+    <a href="https://www.nba.com/heat/" target="_blank">
+      <img src="miami_heat.png" alt="Miami Heat Logo">
+      <h3>Miami Heat</h3>
+    </a>
+  </div>
+
+  <!-- Orlando Magic -->
+  <div class="team-card">
+    <a href="https://www.nba.com/magic/" target="_blank">
+      <img src="orlando_magic.png" alt="Orlando Magic Logo">
+      <h3>Orlando Magic</h3>
+    </a>
+  </div>
+
+  <!-- Washington Wizards -->
+  <div class="team-card">
+    <a href="https://www.nba.com/wizards/" target="_blank">
+      <img src="washington_wizards.png" alt="Washington Wizards Logo">
+      <h3>Washington Wizards</h3>
+    </a>
+  </div>
+</div>
+
+<!-- Southwest Division -->
+<div class="division">
+  <h3>Southwest Division</h3>
+
+  <!-- Dallas Mavericks -->
+  <div class="team-card">
+    <a href="https://www.nba.com/mavericks/" target="_blank">
+      <img src="dallas_mavericks.png" alt="Dallas Mavericks Logo">
+      <h3>Dallas Mavericks</h3>
+    </a>
+  </div>
+
+  <!-- Houston Rockets -->
+  <div class="team-card">
+    <a href="https://www.nba.com/rockets/" target="_blank">
+      <img src="houston_rockets.png" alt="Houston Rockets Logo">
+      <h3>Houston Rockets</h3>
+    </a>
+  </div>
+
+  <!-- Memphis Grizzlies -->
+  <div class="team-card">
+    <a href="https://www.nba.com/grizzlies/" target="_blank">
+      <img src="memphis_grizzlies.png" alt="Memphis Grizzlies Logo">
+      <h3>Memphis Grizzlies</h3>
+    </a>
+  </div>
+
+  <!-- New Orleans Pelicans -->
+  <div class="team-card">
+    <a href="https://www.nba.com/pelicans/" target="_blank">
+      <img src="new_orleans_pelicans.png" alt="New Orleans Pelicans Logo">
+      <h3>New Orleans Pelicans</h3>
+    </a>
+  </div>
+
+  <!-- San Antonio Spurs -->
+  <div class="team-card">
+    <a href="https://www.nba.com/spurs/" target="_blank">
+      <img src="san_antonio_spurs.png" alt="San Antonio Spurs Logo">
+      <h3>San Antonio Spurs</h3>
+    </a>
+  </div>
+</section>
+
+<div class="hero-images">
+  <img src="hero1.png" alt="Hero Image 1">
+  <img src="hero2.png" alt="Hero Image 2">
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
